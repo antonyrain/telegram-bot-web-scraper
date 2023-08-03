@@ -1,10 +1,9 @@
 POST http://localhost:8080/api/result
 Content-Type: application/json
-
 {
     "model":"audi2",
     "year":"2012",
     "price": "5000",
-    "url":"https://stackoverflow.com/",
-    "telegramUserId": 6233247565
+    "url":"http://localhost:8080/",
+    "telegramUserId": 1234
 }

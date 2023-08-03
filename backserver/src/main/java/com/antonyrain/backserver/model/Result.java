@@ -34,6 +34,8 @@ public class Result {
         this.telegramUserId = telegramUserId;
     };
 
+    // Getters
+
     public Integer getResultId() {
         return resultId;
     }
@@ -42,40 +44,41 @@ public class Result {
         return model;
     }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
-
     public String getYear() {
         return year;
-    }
-
-    public void setYear(String year) {
-        this.year = year;
     }
 
     public String getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
     public String getUrl() {
         return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
     }
 
     public Long getTelegramUserId() {
         return telegramUserId;
     }
 
+    // Setters
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
     public void setTelegramUserId(Long telegramUserId) {
         this.telegramUserId = telegramUserId;
     }
-    
 }

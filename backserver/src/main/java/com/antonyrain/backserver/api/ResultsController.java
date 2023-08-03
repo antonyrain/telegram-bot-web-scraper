@@ -25,9 +25,10 @@ public class ResultsController {
 
     @PostMapping(path="/results")
     public String newFilter (@RequestBody Result newResult) {
-        List<Result> existEntity = resultRepository.findByIDandURL(newResult.getTelegramUserId(), newResult.getUrl());
-        System.out.println("Here: ");
-        System.out.println(existEntity);
+        List<Result> existEntity = resultRepository.findByIDandURL(
+            newResult.getTelegramUserId(),
+            newResult.getUrl()
+            );
         if (existEntity.size() == 0){
             resultRepository.save(newResult);
             return "Saved";

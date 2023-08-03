@@ -1,2 +1,2 @@
-GET http://localhost:8080/api/filters/all/645795434
+GET http://localhost:8080/api/filters/all/1234
 Content-Type: application/json
