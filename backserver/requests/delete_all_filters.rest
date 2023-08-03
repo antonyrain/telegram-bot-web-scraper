@@ -1,0 +1,2 @@
+DELETE http://localhost:8080/api/filter/delete/645795434
+Content-Type: application/json

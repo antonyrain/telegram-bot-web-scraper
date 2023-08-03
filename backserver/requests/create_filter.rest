@@ -1,0 +1,7 @@
+POST http://localhost:8080/api/filter
+Content-Type: application/json
+
+{
+    "telegramUserId": 10122,
+    "searchString": "mazda"
+}
