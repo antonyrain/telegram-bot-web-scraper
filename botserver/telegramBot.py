@@ -24,6 +24,7 @@ def buttons(message):
     itembtn14 = types.KeyboardButton('Opel')
     itembtn15 = types.KeyboardButton('BMW')
     itembtn16 = types.KeyboardButton('Peugeot')
+
     markup.row(itembtn5)
     markup.row(itembtn6)
     markup.row(itembtn7)
@@ -39,6 +40,7 @@ def buttons(message):
 
     markup.row(itembtn1, itembtn2)
     markup.row(itembtn3, itembtn4)
+    
     bot.send_message(message.chat.id, "Choose the model:", reply_markup=markup)
 	
 @bot.message_handler(regexp='Results')
@@ -73,84 +75,72 @@ def delete_filters(message):
 def post_filter(message):
     id = message.from_user.id
     data = postFilter(id, "Mazda",)
-    print(type(id))
     bot.reply_to(message, data)
 
 @bot.message_handler(regexp='Audi')
 def post_filter(message):
     id = message.from_user.id
     data = postFilter(id, "Audi",)
-    print(type(id))
     bot.reply_to(message, data)
 
 @bot.message_handler(regexp='Kia')
 def post_filter(message):
     id = message.from_user.id
     data = postFilter(id, "Kia",)
-    print(type(id))
     bot.reply_to(message, data)
 
 @bot.message_handler(regexp='Toyota')
 def post_filter(message):
     id = message.from_user.id
     data = postFilter(id, "Toyota",)
-    print(type(id))
     bot.reply_to(message, data)
 
 @bot.message_handler(regexp='Ваз')
 def post_filter(message):
     id = message.from_user.id
     data = postFilter(id, "Ваз",)
-    print(type(id))
     bot.reply_to(message, data)
 
 @bot.message_handler(regexp='Ford')
 def post_filter(message):
     id = message.from_user.id
     data = postFilter(id, "Ford",)
-    print(type(id))
     bot.reply_to(message, data)
 
 @bot.message_handler(regexp='Skoda')
 def post_filter(message):
     id = message.from_user.id
     data = postFilter(id, "Skoda",)
-    print(type(id))
     bot.reply_to(message, data)
 
 @bot.message_handler(regexp='Volkswagen')
 def post_filter(message):
     id = message.from_user.id
     data = postFilter(id, "Volkswagen",)
-    print(type(id))
     bot.reply_to(message, data)
 
 @bot.message_handler(regexp='Renault')
 def post_filter(message):
     id = message.from_user.id
     data = postFilter(id, "Renault",)
-    print(type(id))
     bot.reply_to(message, data)
 
 @bot.message_handler(regexp='Opel')
 def post_filter(message):
     id = message.from_user.id
     data = postFilter(id, "Opel",)
-    print(type(id))
     bot.reply_to(message, data)
 
 @bot.message_handler(regexp='BMW')
 def post_filter(message):
     id = message.from_user.id
     data = postFilter(id, "BMW",)
-    print(type(id))
     bot.reply_to(message, data)
 
 @bot.message_handler(regexp='Peugeot')
 def post_filter(message):
     id = message.from_user.id
     data = postFilter(id, "Peugeot",)
-    print(type(id))
     bot.reply_to(message, data)
     
 bot.infinity_polling()

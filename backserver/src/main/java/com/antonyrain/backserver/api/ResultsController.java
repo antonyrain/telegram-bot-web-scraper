@@ -38,7 +38,7 @@ public class ResultsController {
     };
 
     @GetMapping(path="/results/{id}")
-    List<Result> one(@PathVariable Long id) {
+    List<Result> findAllByUserId(@PathVariable Long id) {
         return resultRepository.findAllByUserId(id);
     }
 

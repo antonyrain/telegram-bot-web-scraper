@@ -2,7 +2,6 @@ import requests
 
 def getResults(id):
     results = requests.get(f'http://localhost:8080/api/results/{id}').json()
-    print(type(results))
     return results
 
 def deleteAllResults(id):
@@ -11,7 +10,6 @@ def deleteAllResults(id):
 
 def getFilters(id):
     results = requests.get(f'http://localhost:8080/api/filters/all/{id}').json()
-    print(type(results))
     return results
 
 def postFilter(id, search_str):
