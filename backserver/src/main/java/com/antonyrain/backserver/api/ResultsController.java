@@ -25,11 +25,11 @@ public class ResultsController {
 
     @PostMapping(path="/results")
     public String newFilter (@RequestBody Result newResult) {
-        List<Result> existEntity = resultRepository.findByIDandURL(
+        List<Result> recordExists = resultRepository.findByIdAndUrl(
             newResult.getTelegramUserId(),
             newResult.getUrl()
             );
-        if (existEntity.size() == 0){
+        if (recordExists.size() == 0){
             resultRepository.save(newResult);
             return "Saved";
         } else {
@@ -38,7 +38,7 @@ public class ResultsController {
     };
 
     @GetMapping(path="/results/{id}")
-    List<Result> findAllByUserId(@PathVariable Long id) {
+    List<Result> getAllByUserId(@PathVariable Long id) {
         return resultRepository.findAllByUserId(id);
     }
 

@@ -23,5 +23,5 @@ public interface ResultRepository extends JpaRepository<Result, Long> {
     void deleteAllResults(@Param("id") Long id);
 
     @Query(value = "select * from results where results.telegram_user_id = :id and results.url = :url", nativeQuery = true)
-    List<Result> findByIDandURL(@Param("id") Long id, @Param("url") String url);
+    List<Result> findByIdAndUrl(@Param("id") Long id, @Param("url") String url);
 }
